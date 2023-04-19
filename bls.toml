@@ -1,0 +1,19 @@
+name = "blockless-http-tutorial"
+version = "1.0.0"
+content_type = "json"
+
+[deployment]
+nodes = 4
+permissions = [
+  "https://httpbin.org"
+]
+
+[build]
+dir = "build"
+entry = "blockless-http-tutorial_debug.wasm"
+command = "npm run build:debug"
+
+[build_release]
+dir = "build"
+entry = "blockless-http-tutorial.wasm"
+command = "npm run build:release"
